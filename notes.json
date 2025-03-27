@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Grocery List",
+    "body": "Eggs, Milk, Bread, Butter",
+    "color": "#000000",
+    "starred": false
+  },
+  {
+    "id": 5,
+    "title": "Sports",
+    "body": "n",
+    "color": "#8f6161",
+    "starred": true
+  }
+]

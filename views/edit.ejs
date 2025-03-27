@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Note</title>
+  <link rel="stylesheet" href="/stylesheets/edit.css">
+</head>
+<body>
+  <div id="Form">
+  <h2>Edit Note</h2>
+  <form action="/edit-note/<%= note.id %>" method="post">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="<%= note.title %>" required><br><br>
+
+    <label for="body">Message:</label><br>
+    <textarea id="body" name="body" rows="5" cols="30"><%= note.body %></textarea><br><br>
+
+    <label for="color">Color:</label>
+    <input type="color" id="color" name="color" value="<%= note.color %>"><br><br>
+
+    <label for="starred">Starred:</label>
+    <input type="checkbox" id="starred" name="starred" value="true" <%= note.starred ? 'checked' : '' %>><br><br>
+
+    <input type="submit" value="Save Changes">
+  </form>
+</div>
+</body>
+</html>

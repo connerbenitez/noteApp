@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note-Taking App</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div id="Form">
+    <h2>Create a Note</h2>
+    <form action="/submit-note" method="post">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required><br><br>
+      
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="body" rows="5" cols="30" required></textarea><br><br>
+
+      <label for="color">Color:</label>
+      <!-- <input type="text" id="color" name="color"><br><br> -->
+      <input type="color" id="color" name="color"><br><br>
+
+      <label for="starred">Starred:</label>
+      <input type="checkbox" id="starred" name="starred" value="true"><br><br>
+      
+      <input type="submit" value="Save Note">
+    </form>
+  </div>
+
+  <div id="Notes">
+    <% data.forEach(function(note) { %>
+      <div class="note" style="background-color: <%= note.color %>;
+      border-radius : 12px;
+      padding: 12px;
+      margin: 12px;
+      width: 20%;
+      ;
+      
+
+      border: 8px solid <%= note.starred ? 'gold' : 'black' %>;">
+        <h3><%= note.title %></h3>
+        <p><%= note.body %></p>
+        <!-- <p>Starred: <%= note.starred %></p> -->
+        <!-- <p>ID: <%= note.id %></p> -->
+        
+        <a href="/note/<%= note.id %>/edit">
+          <button>Edit</button>
+        </a>
+        <a href="/note/<%= note.id %>/delete">
+          <button>Delete</button>
+        </a>
+      </div>
+    <% }); %>
+</div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  #Form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    margin: auto;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #9e9b9b;
+    border-radius: 5px;
+  }
+  input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  input[type="submit"]:hover {
+    background-color: #186e2b;
+  }
+  input[type="checkbox"] {
+    transform: scale(1.5); /* Scale the checkbox to make it bigger */
+    margin-right: 10px; /* Add some spacing to the right */
+    cursor: pointer; /* Ensure the pointer changes to a hand when hovering */
+  }
