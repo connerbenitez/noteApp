@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Grocery List",
     "body": "Eggs, Milk, Bread, Butter",
-    "color": "#000000",
+    "color": "#f7f7f7",
     "starred": false
   },
   {
@@ -12,5 +12,12 @@
     "body": "n",
     "color": "#8f6161",
     "starred": true
+  },
+  {
+    "id": 6,
+    "title": "Grocery ",
+    "body": "s",
+    "color": "#e6a7a7",
+    "starred": false
   }
 ]
